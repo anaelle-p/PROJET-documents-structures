@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="index.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<racine>
+    <partie>
+        <titre>Présentation du projet</titre>
+        <p>L'objectif de ce projet est de réaliser une chaîne de traitement pour aboutir à la publication de documents en ligne.</p>
+        <etape>
+            <titre>Transformation des documents</titre>
+            <p>Cette première étape consiste à transformer les documents au format OpenDocuments (Madame-bovary.odt, SIDDHARTHA.odt, WH.odt) en documents XML respectant le standard de la Text Encoding Initiative (TEI) à l'aide d'une feuille XSLT.</p>
+            <image>data/equivalence.jpg</image>
+        </etape>
+        <etape>
+            <titre>Mise en place d'un site internet sur eXist-db</titre>
+            <p>Les documents XML/TEI produits lors de l'étape précédentes vont ensuite être stockés dans la base de données d'eXist-db. Ce site internet a donc été produit à partir de cette base de données et à l'aide de xQuery et XSLT.</p>
+        </etape>
+    </partie>
+    <partie>
+        <titre>Présentation du site</titre>
+        <p>Le site internet est composé de 3 pages : </p>
+        <liste>
+            <element>Accueil : pour présenter le site,</element>
+            <element>Recherche : pour faire de la recherche plein texte dans les documents ou sélectionner les documents selon leurs métadonnées grace à un formulaire de recherche,</element>
+            <element>Documents : pour afficher les documents mis en pages.</element>
+        </liste>
+    </partie>
+    <partie>
+        <titre>Les difficultés rencontrées</titre>
+        <p>Dans la première partie du devoir, j'ai eu du mal à visualiser la sortie que l'on devait produire à partir du schema tei.rng . J'ai donc commencé par créer un document XML avec des balises vides validé par le schema de la TEI en m'aidant d'exemples sur internet avant d'écrire la feuille XSLT.</p>
+        <p>Dans la deuxième partie, j'ai eu du mal à comprendre la façon de fonctionner d'exist-db. Je me suis donc aidée de tutos et de documentation trouvés sur internet.</p>
+    </partie>
+</racine>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <start>
+        <ref name="Racine"/>
+    </start>
+    <define name="Racine">
+        <element name="racine">
+            <oneOrMore>
+                <element name="partie">
+                <ref name="partie"/>
+                </element>
+            </oneOrMore>
+        </element>
+    </define>
+    <define name="partie">
+        <element name="titre">
+            <text/>
+        </element>
+            <oneOrMore>
+                <element name="p">
+                <text/>
+            </element>
+            </oneOrMore>
+            <zeroOrMore>
+                <element name="etape">
+                <ref name="etape"/>
+                </element>
+            </zeroOrMore>
+        <zeroOrMore>
+            <ref name="liste"/>
+        </zeroOrMore>
+    </define>
+    <define name="etape">
+        <element name="titre">
+            <text/>
+        </element>
+        <element name="p">
+            <text/>
+        </element>
+        <zeroOrMore>
+            <element name="image">
+                <text/>
+            </element>
+        </zeroOrMore>
+    </define>
+    <define name="liste">
+        <element name="liste">
+        <oneOrMore>
+            <element name="element">
+                    <text/>
+                </element>
+        </oneOrMore>
+        </element>
+    </define>
+</grammar>
